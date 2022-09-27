@@ -1,0 +1,17 @@
+1. CRIAÇÃO DA SEQUENCE PARA CONTATO
+create sequence contato_sequence
+  MINVALUE 1
+  MAXVALUE 99999999
+  start WITH 1000
+  cache 20
+
+2. CRIAÇÃO DA TABELA CONTATO
+create table java_contato (
+  id number(10, 0) not null,
+  nome varchar2(100) not null,
+  email varchar2(100) not null unique,
+  senha varchar2(255) not null,
+  telefone varchar2(50) not null,
+  dataNascimento date not null,
+  primary key (id)
+)
